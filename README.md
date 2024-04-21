@@ -72,7 +72,7 @@ PROCEDURE TEST_APEX_UI AS
                         P_IN_USERNAME      => <APP_USER>
                     );
 
-        UT.EXPECT(VR_ACTUAL).TO_(EQUAL(VR_EXPECTED));
+        UT.EXPECT(VR_ACTUAL).TO_(EQUAL(VR_EXPECTED)).UNORDERED;
      
     END;
 ```
