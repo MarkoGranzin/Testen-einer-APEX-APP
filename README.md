@@ -1,6 +1,10 @@
-# This package is used to test an Oracle APEX App with utPLSQL (https://www.utplsql.org/).
+# This package is used to test an Oracle APEX App with utPLSQL .
 
-Before import place check and replace the constants.
+## Before import
+
+utPLSQL is requiered(https://www.utplsql.org/)
+
+place check and replace the constants.
 ``` /*
     Used DB Owner
     */
@@ -15,12 +19,15 @@ Before import place check and replace the constants.
     C_WORKSPACE VARCHAR2(100) := '<MY_APEX_WORKSPACE>';
 ```
 
-After import you can directly use the Item2Submit test.
+## Test of Item2Submit
+Directly after configuration you can use the Item 2 Submit test. 
 
-Query an APEX region
-is used to query an region from an APEX page.
+## Query an APEX region
+is used to query an region from an APEX page. 
 
-## 1.) Get the Binding JSONS
+___The Region Sourc Type must be SQL Query.___
+
+### 1.) Get the Binding JSONS
 
 ```
 SELECT TEST_APEX.GET_REGION_SOURCE_BINDINGS(
@@ -33,13 +40,13 @@ FROM
     DUAL;
 ```
 
-## 2.) Fill the binding JSON with the test Setting
+### 2.) Fill the binding JSON with the test Setting
 
        Please note the bindings are text in APEX. 
        For date and number you must ensure that the nls setting an the variable syntax matches
        e.g. you can force the NLS settings for all test with ALTER SESSION SET NLS_LANGUAGE=XXXX 
        
-## 3.) check the result
+### 3.) check the result
 
 ```
 SET SERVEROUTPUT ON
@@ -57,7 +64,7 @@ END;
 
 
 
-## 4.) run it in utPLSQL :
+### 4.) run it in utPLSQL :
 
  ```
 PROCEDURE TEST_APEX_UI AS
