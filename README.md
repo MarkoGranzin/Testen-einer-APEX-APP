@@ -35,7 +35,7 @@ FROM
 
 ## 2.) Fill the binding JSON with the test Setting
 
-       Please Nnote the bindings are text in APEX. 
+       Please note the bindings are text in APEX. 
        For date and number you must ensure that the nls setting an the variable syntax matches
        e.g. you can force the NLS settings for all test with ALTER SESSION SET NLS_LANGUAGE=XXXX 
        
